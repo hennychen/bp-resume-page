@@ -32,16 +32,11 @@ There is no backend settings to configure, it's all frontend, just that simple.
 
 
 == Installation ==
-
-
 1a. Upload the bp_resume_page folder to the `/wp-content/plugins/` directory.
-
 or
-
 1b.Download through the plugins manager in the WordPress backend admin area. 
 
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-
 3. Check Functionality, and your Done.
 
 

@@ -49,18 +49,17 @@ or
 == Frequently Asked Questions ==
 
 = 
-Can you add functionality? 
-=
+= Can you add functionality? =
+
 
 Possibly, email us at <a href="mailto:plugins@scenicjobs.com">plugins@scenicjobs.com</a>.
 
-= 
 
-Can I donate? 
-=
 
-Sure, go to http://scenicjobs.com/wordpress-plugins.=
+= Can I donate? = 
 
+
+Sure, go to http://scenicjobs.com/wordpress-plugins.
 
 == Screenshots ==
 
@@ -78,6 +77,6 @@ Sure, go to http://scenicjobs.com/wordpress-plugins.=
 == Changelog ==
 
 = 
-1.0 
-=
-Plugin Initial Release=
+
+=1.0=
+Plugin Initial Release

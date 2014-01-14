@@ -42,7 +42,7 @@
 <option value="Chad">Chad</option>
 <option value="Channel Islands">Channel Islands</option>
 <option value="Chile">Chile</option>
-<option value="China">China</option>
+<option value="China" selected="selected"><?php _e('China','buddypress'); ?></option>
 <option value="Christmas Island">Christmas Island</option>
 <option value="Cocos Island">Cocos Island</option>
 <option value="Colombia">Colombia</option>
@@ -229,7 +229,7 @@
 <option value="Ukraine">Ukraine</option>
 <option value="United Arab Erimates">United Arab Emirates</option>
 <option value="United Kingdom">United Kingdom</option>
-<option value="USA" selected="selected">United States of America</option>
+<option value="USA">United States of America</option>
 <option value="Uraguay">Uruguay</option>
 <option value="Uzbekistan">Uzbekistan</option>
 <option value="Vanuatu">Vanuatu</option>

@@ -1,10 +1,10 @@
 
 <div class="bprp-edit">
 	<div class="education bprp-section">
-		<h2><?php _e('Education','budypress')?></h2>
+		<h2><?php _e('Education','buddypress')?></h2>
 		<div class="section-descr-wrap">
 			<div class="line"></div>
-			<h4 class="section-descr"><?php _e('Enter School','budypress')?></h4>
+			<h4 class="section-descr"><?php _e('Enter School','buddypress')?></h4>
 		</div>
 		<form class="bprp-form standard-form" action="" method="post" >
 			<table>
@@ -64,14 +64,14 @@
 				</tr>
 			</table>
 			<p class="submit">
-				<input type="submit" class="bprp-button" name="add_education" value="+ Add"/>
+				<input type="submit" class="bprp-button" name="add_education" value="+ <?php _e('Add','buddypress'); ?>"/>
 			</p>
 		</form>
 		
 	</div>
 	
 	<div class="experience bprp-section">
-		<h2><?php _e('Professional Experience','budypress')?></h2>
+		<h2><?php _e('Professional Experience','buddypress')?></h2>
 		<div class="section-descr-wrap">
 			<div class="line"></div>
 			<h4 class="section-descr"><?php _e('Employer Information','buddypress')?></h4>
@@ -80,15 +80,15 @@
 			<table>
 				<tr>
 					<th><?php _e('Employer','buddypress')?></th>
-					<td><input type="text" name="experience[employer]" class="long" value="" placeholder="Enter employer name"/></td>
+					<td><input type="text" name="experience[employer]" class="long" value="" placeholder="<?php _e('Enter employer name','buddypress'); ?>"/></td>
 				</tr>
 				<tr>
 					<th><?php _e('City','buddypress')?></th>
-					<td><input type="text" name="experience[city]" class="long" value="" placeholder="Enter City" /></td>
+					<td><input type="text" name="experience[city]" class="long" value="" placeholder="<?php _e('Enter City','buddypress') ?>" /></td>
 				</tr>
 				<tr>
 					<th><?php _e('State','buddypress')?></th>
-					<td><input type="text" name="experience[stare]" class="long" value="" placeholder="Enter State"/></td>
+					<td><input type="text" name="experience[stare]" class="long" value="" placeholder="<?php _e('Enter State','buddypress'); ?>"/></td>
 				</tr>
 				<tr>
 					<th><?php _e('Country','buddypress')?></th>
@@ -108,7 +108,7 @@
 			<table>
 				<tr>
 					<th><?php _e('Position','buddypress')?></th>
-					<td><input type="text" name="experience[position]" class="long" value="" placeholder="Enter position title"/></td>
+					<td><input type="text" name="experience[position]" class="long" value="" placeholder="<?php _e('Enter position title','buddypress'); ?>"/></td>
 				</tr>
 				<tr>
 					<th><?php _e('Start Date','buddypress')?></th>
@@ -139,14 +139,14 @@
 				</tr>
 			</table>
 			<p class="submit">
-				<input type="submit" class="bprp-button" name="add_experience"  value="+ Add"/>
+				<input type="submit" class="bprp-button" name="add_experience"  value="+ <?php _e('Add','buddypress'); ?>"/>
 			</p>
 		</form>
 		
 	</div>
 	
 	<div class="experience bprp-section">
-		<h2><?php _e('Skills','budypress')?></h2>
+		<h2><?php _e('Skills','buddypress')?></h2>
 		<div class="section-descr-wrap">
 			<div class="line"></div>
 			<h4 class="section-descr"><?php _e('Add Skills','buddypress')?></h4>
@@ -156,11 +156,11 @@
 			<table>
 				<tr>
 					<th></th>
-					<td><input type="text" name="skill" class="long" value="" placeholder="Add skills, individually"/></td>
+					<td><input type="text" name="skill" class="long" value="" placeholder="<?php _e('Add skills, individually','buddypress'); ?>"/></td>
 				</tr>
 			</table>
 			<p class="submit">
-				<input type="submit" class="bprp-button" name="add_skill" value="+ Add"/>
+				<input type="submit" class="bprp-button" name="add_skill" value="+ <?php _e('Add','buddypress'); ?>"/>
 			</p>
 		</form>
 		

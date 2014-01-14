@@ -14,7 +14,7 @@ usort($experience, array($this, 'sort_dates'));
 <div class="bprp-view">
 	
 	<div class="education bprp-section">
-		<h2><?php _e('Education','budypress')?></h2>
+		<h2><?php _e('Education','buddypress')?></h2>
 		<?php if( !empty($education) ):?>
 			<?php foreach( (array)$education as $i => $school ):?>
 				<div class="details-item">
@@ -40,13 +40,13 @@ usort($experience, array($this, 'sort_dates'));
 			<?php endforeach;?>
 		<?php else:?>
 			<div class="details-item">
-				<p>No Education places added</p>
+				<p><?php _e('No Education places added','buddypress'); ?></p>
 			</div>
 		<?php endif;?>
 	</div>
 
 	<div class="experience bprp-section">
-		<h2><?php _e('Professional Experience','budypress')?></h2>
+		<h2><?php _e('Professional Experience','buddypress')?></h2>
 		<?php if( !empty($experience) ):?>
 			<?php foreach( (array)$experience as $i => $exp ):?>
 			<div class="details-item">
@@ -59,7 +59,7 @@ usort($experience, array($this, 'sort_dates'));
 					<span class="title"><?php echo $exp['employer']?></span>
 					<span class="location info"><?php echo $exp['city'].', '.$exp['state'].' '.$exp['country']?></span>		
 				</p>
-				<span class="info">Position: <?php echo $exp['position']?></span><br/>
+				<span class="info"><?php _e('Position','buddypress'); ?>: <?php echo $exp['position']?></span><br/>
 				<span class="info">
 					From - <?php echo $exp['start_date_m'].'/'.$exp['start_date_y']?> 
 					<?php if( $exp['current'] == 0):?>
@@ -70,7 +70,7 @@ usort($experience, array($this, 'sort_dates'));
 			<?php endforeach;?>
 		<?php else:?>
 			<div class="details-item">
-				<p>No Professional Experience added</p>
+				<p><?php _e('No Professional Experience added','buddypress'); ?></p>
 			</div>
 		<?php endif;?>
 		
@@ -79,7 +79,7 @@ usort($experience, array($this, 'sort_dates'));
 	</div>
 
 	<div class="skills_list bprp-section">
-		<h2><?php _e('Skills','budypress')?></h2>
+		<h2><?php _e('Skills','buddypress')?></h2>
 		<div class="details-item">
 			<?php if( !empty($skills) ):?>
 				<ul class="skills">
@@ -92,7 +92,7 @@ usort($experience, array($this, 'sort_dates'));
 					<?php endforeach;?>
 				</ul>
 			<?php else:?>
-				<p>No Skills added</p>
+				<p><?php _e('No Skills added','buddypress'); ?></p>
 			<?php endif;?>
 
 		</div>
@@ -103,7 +103,7 @@ usort($experience, array($this, 'sort_dates'));
 <script>
 jQuery(document).ready(function(){
 	jQuery('.del-button a, .del-skill').click(function(){
-		return confirm('Are you sure want delete this info?')
+		return confirm(<?php _e('Are you sure want delete this info?','buddypress'); ?>)
 	})
 });
 </script>

@@ -10,6 +10,18 @@
 
 define( BPRP_ROOT_PATH, plugin_dir_path(__FILE__));
 
+
+/**
+ * 多语言加载
+ */
+function myplugin_init() {
+    load_plugin_textdomain( 'buddypress', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
+add_action('bp_include', 'myplugin_init');
+
+
+//load_plugin_textdomain( 'buddypress', false,  'bp-resume-page/languages' );
+
 class BP_Resume_Page {
 	
 	var $component_name = 'Resume';
@@ -19,6 +31,7 @@ class BP_Resume_Page {
 	
 	public function __construct() {
 		add_action('bp_init', array($this,'init'));
+        add_action( 'bp_setup_admin_bar', array($this,'bp_resume_setup_admin_bar') );
 	}
 	
 	function init() {
@@ -44,7 +57,7 @@ class BP_Resume_Page {
 		$parent_url = trailingslashit( $bp->displayed_user->domain . $this->component_slug );
 		
 		$main_page = array(
-			'name'            => 'Resume',
+			'name'            => __('Resume','buddypress'),
 			'slug'            => 'view',
 			'parent_url'      => $parent_url,
 			'parent_slug'     => $this->component_slug,
@@ -55,7 +68,7 @@ class BP_Resume_Page {
 		bp_core_new_subnav_item($main_page);
 		
 		$edit_page = array(
-			'name'            => 'Add',
+			'name'            => __('Add','buddypress'),
 			'slug'            => 'add',
 			'parent_url'      => $parent_url,
 			'parent_slug'     => $this->component_slug,
@@ -68,7 +81,46 @@ class BP_Resume_Page {
 		add_action('bp_template_content', array($this, 'template_content'));
 
 	}
-	
+
+
+    /**
+     * bp_resume_setup_admin_bar()
+     * 添加顶部导航栏快捷导航
+     * sets adminbar
+     */
+    function bp_resume_setup_admin_bar(){
+        global $wp_admin_bar, $bp;
+        if ( is_user_logged_in() ) {
+            $user_domain = bp_loggedin_user_domain();
+
+            $parent_url = trailingslashit( $user_domain . $this->component_slug );
+
+            echo $parent_url;
+            $wp_admin_bar->add_menu( array(
+                'parent'  => $bp->my_account_menu_id,
+                'id'      => $this->component_slug,
+                'title'   => __( $this->component_name , 'buddypress'),
+                'href'    => $parent_url,
+            ) );
+
+            $wp_admin_bar->add_menu( array(
+                    'parent'  => $this->component_slug,
+                    'id'      => 'my-bp-resume',
+                    'title'   => __('Resume','buddypress'),
+                    'href'    => $parent_url,
+                )
+            );
+
+            $wp_admin_bar->add_menu( array(
+                'parent'  => $this->component_slug,
+                'id'      => 'my-bp-resume-add',
+                'title'   => __('Add','buddypress'),
+                'href'    => trailingslashit( $parent_url.'add' )
+            ));
+        }
+    }
+
+
 	function resume_page() {
 		bp_core_load_template( 'members/single/plugins' );
 	}

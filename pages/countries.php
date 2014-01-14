@@ -1,4 +1,4 @@
-<option value="Afganistan">Afghanistan</option>
+<option value="Afganistan"><?php _e('Afghanistan','bp-resume'); ?></option>
 <option value="Albania">Albania</option>
 <option value="Algeria">Algeria</option>
 <option value="American Samoa">American Samoa</option>

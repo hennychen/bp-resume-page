@@ -95,7 +95,7 @@ class BP_Resume_Page {
 
             $parent_url = trailingslashit( $user_domain . $this->component_slug );
 
-            echo $parent_url;
+            
             $wp_admin_bar->add_menu( array(
                 'parent'  => $bp->my_account_menu_id,
                 'id'      => $this->component_slug,
